@@ -1,0 +1,82 @@
+### === BACKEND (Python/Django) === ###
+# Bytecode and cache
+**/__pycache__/
+*.py[cod]
+*.pyc
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Django secret key
+secret_key.txt
+
+# Database files
+*.sqlite3
+*.db
+*.dump
+
+# Static files (if collected locally)
+staticfiles/
+media/
+
+# Coverage reports
+.coverage
+htmlcov/
+
+# PyCharm
+.idea/
+
+### === FRONTEND (React) === ###
+# Dependencies
+node_modules/
+.pnpm-debug.log
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+.out/
+.next/
+
+# Logs and cache
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.cache/
+
+# Environment files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor and OS files
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Test coverage
+coverage/
+.nyc_output/
+
+### === UNIVERSAL === ###
+# System files
+Thumbs.db
+
+# Package locks (keep only one)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
