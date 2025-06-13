@@ -1,0 +1,1 @@
+This product's button component was adapted from "Create the PERFECT Button (TailwindCSS / Framer Motion)" by rithmic (https://www.youtube.com/watch?v=jcpLprT5F0I), used under the terms of the MIT license.
