@@ -38,15 +38,8 @@ const SlideTabs = () => {
 const Tab = ({ children, setPosition }) => {
   const ref = useRef<HTMLLIElement>(null);
 
-  // useEffect(() => {
-  //     if (!ref.current) {
-  //         return;
-  //     }
-  //     console.log(ref.current.getBoundingClientRect());
-  // })
-
   return (
-    <li
+    <motion.li
       ref={ref}
       onMouseEnter={() => {
         if (!ref.current) return;
@@ -59,10 +52,18 @@ const Tab = ({ children, setPosition }) => {
           left: ref.current.offsetLeft,
         });
       }}
-      className="relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference md:px-5 md:py-3 md:text-base"
+      // animate
+      whileTap={{
+        opacity: 1,
+        scale: 1.05,
+        boxShadow: "0px 5px 8px #407",
+        cursor: "pointer"
+      }}
+
+      className="relative z-10 block cursor-pointer px-3 py-1.5 rounded-full text-xs uppercase text-white font-medium hover:text-primary md:px-5 md:py-3 md:text-base"
     >
       {children}
-    </li>
+    </motion.li>
   );
 };
 

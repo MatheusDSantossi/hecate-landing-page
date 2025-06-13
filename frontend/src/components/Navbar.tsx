@@ -2,6 +2,7 @@ import "../App.css";
 import lightLogo from "/logo.svg";
 import darkLogo from "/logo_darker.svg";
 import { SlideTabsExample } from "./SlideTabs";
+import { AnimatedButton } from "./Button";
 
 function Navbar() {
     return (
@@ -30,7 +31,8 @@ function Navbar() {
                 </div> */}
 
                 {/* Get in action button */}
-                <button className="bg-secondary text-primary">See Hecate in Action</button>
+                {/* <button className="bg-secondary text-primary">See Hecate in Action</button> */}
+                <AnimatedButton children={"See Hecate in Action"} />
 
             </div>
         </nav>
