@@ -1,49 +1,33 @@
-import { motion } from "framer-motion";
+import { motion, useSpring, useTime, useTransform } from "framer-motion";
+import { useEffect } from "react";
 
 export const AnimatedButton = ({ children }: { children: React.ReactNode }) => {
-  const borderVariants = {
-    rest: { opacity: 0, rotate: 0 },
-    hover: {
-      opacity: 1,
-      rotate: 360,
-      transition: {
-        // continuous spin, 2s per loop
-        rotate: { repeat: Infinity, duration: 2, ease: "linear" },
-        // quick fade
-        opacity: { duration: 0.2 },
-      },
-    },
-  };
-
   return (
-    <motion.button
-      initial="rest"
-      whileHover="hover"
-      className="relative inline-block rounded-lg p-[2px] overflow-hidden"
+    <motion.button className="hidden md:block cursor-pointer px-6 py-2 rounded-md radial-gradient"
+    initial={{ "--x": "100%", scale: 1}}
+    animate={{ "--x": "-100%"}}
+    whileTap={{ scale: 0.97 }}
+    whileHover={{ scale: 1.05 }}
+    transition={{
+      repeat: Infinity,
+      repeatType: "loop",
+      repeatDelay: 1,
+      type: "spring",
+      stiffness: 20,
+      damping: 15,
+      mass: 2,
+      scale: {
+        type: "spring",
+        stiffness: 10,
+        damping: 5,
+        mass: 0.1
+      }
+    }}
     >
-      {/* 1️⃣ Gradient-border layer (absolutely positioned) */}
-      <motion.div
-        className="absolute inset-0 rounded-lg pointer-events-none"
-        style={{ background: "linear-gradient(90deg, #3db82f, #8b5cf6)" }}
-        variants={borderVariants}
-      />
-
-      {/* 2️⃣ Your actual button face (on top) */}
-      <span
-        className="
-          relative 
-          inline-flex             /* make it size itself */
-          items-center 
-          justify-center 
-          bg-secondary 
-          text-primary 
-          rounded-md 
-          px-4 py-2              /* padding for a real button shape */
-          cursor-pointer
-        "
-      >
+      <span className="text-primary tracking-wide font-medium h-full w-full block relative linear-mask">
         {children}
       </span>
+      <span className="block absolute inset-0 rounded-md p-px linear-overlay"></span>
     </motion.button>
   );
 };

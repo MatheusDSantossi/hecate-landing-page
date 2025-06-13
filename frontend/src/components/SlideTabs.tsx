@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 export const SlideTabsExample = () => {
   return (
-    <div className="grid place-content-center">
+    <div className="hidden md:grid place-content-center">
       <SlideTabs />
     </div>
   );
