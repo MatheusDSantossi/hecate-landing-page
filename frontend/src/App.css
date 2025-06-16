@@ -35,17 +35,14 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.burger-icon {
+  fill: none;
+  stroke: white; /* Set the desired default color */
+  transition: stroke 0.3s ease-in-out; /* Optional smooth color change */
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.burger-icon:hover {
+  stroke: #F0FF3D; /* Set the hover color */
 }
 
 @keyframes logo-spin {

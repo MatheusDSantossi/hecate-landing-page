@@ -28,22 +28,48 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.radial-gradient {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(1, 61, 49, 0.05) 0%,
+    transparent 60%
+  ), rgba(255, 246, 41, 1);
 }
-button:hover {
-  border-color: #646cff;
+
+.linear-mask {
+  mask-image: linear-gradient(
+    -75deg,
+    white calc(var(--x) + 20%),
+    transparent calc(var(--x) + 30%),
+    white calc(var(--x) + 100%)
+  );
+  /* Use this to work in every browser */
+  --webkit-mask-image: linear-gradient(
+    -75deg,
+    white calc(var(--x) + 20%),
+    transparent calc(var(--x) + 30%),
+    white calc(var(--x) + 100%)
+  );
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+.linear-overlay {
+  background-image: linear-gradient(
+    -75deg,
+    rgba(255, 255, 255, 0.1) calc(var(--x) + 30%)
+calc(var(--x) + 20%),
+    rgba(255, 255, 255, 0.5) calc(var(--x) + 30%)
+calc(var(--x) + 25%),
+    rgba(255, 255, 255, 0.1) calc(var(--x) + 30%)
+calc(var(--x) + 100%),
+  );
+  mask:
+    linear-gradient(black, black) content-box,
+    linear-gradient(black, black);
+  --webkit-mask:
+    linear-gradient(black, black) content-box,
+    linear-gradient(black, black);
+  mask-composite: exclude;
+  --webkit-mask-composite: xor;
 }
 
 @media (prefers-color-scheme: light) {
