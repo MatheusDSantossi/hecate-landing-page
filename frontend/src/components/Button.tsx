@@ -1,9 +1,8 @@
-import { motion, useSpring, useTime, useTransform } from "framer-motion";
-import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 export const AnimatedButton = ({ children }: { children: React.ReactNode }) => {
   return (
-    <motion.button className="hidden md:block cursor-pointer px-6 py-2 rounded-md radial-gradient"
+    <motion.button className="mt-5 cursor-pointer px-6 py-2 rounded-md radial-gradient md:mt-0"
     initial={{ "--x": "100%", scale: 1}}
     animate={{ "--x": "-100%"}}
     whileTap={{ scale: 0.97 }}
@@ -24,10 +23,10 @@ export const AnimatedButton = ({ children }: { children: React.ReactNode }) => {
       }
     }}
     >
-      <span className="text-primary tracking-wide font-medium h-full w-full block relative linear-mask">
+      <span className="text-primary tracking-wide font-medium h-full w-full relative linear-mask">
         {children}
       </span>
-      <span className="block absolute inset-0 rounded-md p-px linear-overlay"></span>
+      <span className="absolute inset-0 rounded-md p-px linear-overlay"></span>
     </motion.button>
   );
 };

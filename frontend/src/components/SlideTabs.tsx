@@ -1,15 +1,14 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { navItems } from "../utils/NavData";
 
-export const SlideTabsExample = () => {
+export const SlideTabsExample = ({ bgColor }) => {
   return (
-    <div className="hidden md:grid place-content-center">
-      <SlideTabs />
-    </div>
+      <SlideTabs bgColor={bgColor} />
   );
 };
 
-const SlideTabs = () => {
+const SlideTabs = ({ bgColor }) => {
   const [position, setPosition] = useState({
     left: 0,
     width: 0,
@@ -24,12 +23,10 @@ const SlideTabs = () => {
             opacity: 0,
         }));
     }}
-    className="relative mx-auto flex w-fit bg-primary p-1">
-      <Tab setPosition={setPosition}>About</Tab>
-      <Tab setPosition={setPosition}>Features</Tab>
-      <Tab setPosition={setPosition}>Products</Tab>
-      <Tab setPosition={setPosition}>Register</Tab>
-
+    className={`relative mx-auto flex w-fit ${bgColor} p-1`}>
+      {navItems.map(({ id, label }) => (
+        <Tab key={id} setPosition={setPosition}>{label}</Tab>
+      ))}
       <Cursor position={position} />
     </ul>
   );
@@ -60,7 +57,7 @@ const Tab = ({ children, setPosition }) => {
         cursor: "pointer"
       }}
 
-      className="relative z-10 block cursor-pointer px-3 py-1.5 rounded-full text-xs uppercase text-white font-medium hover:text-primary md:px-5 md:py-3 md:text-base"
+      className="relative z-10 block cursor-pointer px-3 py-1.5 mt-5 rounded-full text-base uppercase text-white font-medium hover:text-primary md:px-5 md:py-3 md:mt-0 md:text-sm"
     >
       {children}
     </motion.li>
@@ -71,7 +68,7 @@ const Cursor = ({ position }) => {
   return (
     <motion.li
       animate={position}
-      className="absolute z-0 h-7 rounded-full bg-secondary md:h-12"
+      className="absolute z-0 mt-6 h-7 rounded-full bg-secondary md:h-12 md:mt-0"
     />
   );
 };
