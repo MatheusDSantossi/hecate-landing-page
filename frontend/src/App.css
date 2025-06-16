@@ -1,9 +1,17 @@
+/* Tailwind CSS variables */
+@font-face {
+  font-family: Clash Grotesk;
+  src: url("../src/assets/fonts/ClashGrotesk-Variable.ttf")
+  /* font-style: normal;
+  font-weight: 200 700;
+  font-display: swap; */
+}
+
 @import "tailwindcss";
 
-/* Tailwind CSS variables */
 @theme {
   /* Colors */
-  --color-primary: #013D31;
+  --color-primary: #002E25;
   --color-primary-dark: #012921;
   --color-secondary: #FFF629;
   --color-tertiary: #5D76D3;
@@ -24,6 +32,9 @@
   --text-5xl: 3rem;
   --text-6xl: 4rem;
   --text-7xl: 5rem;
+
+  /* Texts fonts */
+  --font-clash: "Clash Grotesk",  monospace
 }
 
 /* All CSS */
