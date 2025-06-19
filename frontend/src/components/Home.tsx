@@ -8,8 +8,9 @@ const Home = () => {
       <img className="hidden md:block h-[500px] object-contain -ml-25" src={robot} alt="A robot" />
 
       {/* Hero text */}
-      <div className="flex z-10 px-4 justify-center text-center max-w-xl mr-[300px]">
-        <h1 className="text-white font-medium text-4xl md:text-5xl lg:text-9xl leading-tight font-clash">
+      <div className="flex z-10 py-8 
+       justify-center text-center max-w-xl md:px-4 md:mr-[300px]">
+        <h1 className="text-white font-medium text-sm xs:text-xl md:text-5xl lg:text-9xl leading-tight font-clash">
           Elevate Your Business with{" "}
           <span className="text-secondary">AI-Powered</span> {' '} Conversations
         </h1>
