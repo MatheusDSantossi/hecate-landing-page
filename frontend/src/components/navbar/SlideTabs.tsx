@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { navItems } from "../utils/NavData";
+import { navItems } from "../../utils/NavData";
 
 export const SlideTabsExample = ({ bgColor }) => {
   return (
