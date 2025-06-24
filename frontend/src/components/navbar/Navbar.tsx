@@ -1,8 +1,8 @@
 import "../../App.css";
 import lightLogo from "/logo.svg";
 import darkLogo from "/logo_darker.svg";
-import { SlideTabsExample } from "../SlideTabs";
-import { AnimatedButton } from "../Button";
+import { SlideTabsExample } from "./SlideTabs";
+import { AnimatedButton } from "./Button";
 import NavMenu from "./NavMenu";
 
 function Navbar() {

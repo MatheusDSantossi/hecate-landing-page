@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { SlideTabsExample } from "../SlideTabs";
+import { SlideTabsExample } from "./SlideTabs";
 import { motion, AnimatePresence } from "framer-motion";
 import MenuToggle from "./MenuToggle";
-import { AnimatedButton } from "../Button";
+import { AnimatedButton } from "./Button";
 
 const NavMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
