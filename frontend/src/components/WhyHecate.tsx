@@ -1,10 +1,11 @@
 import robotPointing from "/huge_robot_hand_pointing.png";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform, type Variants } from "framer-motion";
 import { fadeIn, staggerContainer, tweenIn } from "../lib/animations";
 import { iconData } from "../utils/WhyHecateIconsData";
 
 const WhyHecate = () => {
+  
   return (
     <section className="relative pt-30 pb-32 overflow-hidden">
       {/* Gradient card */}
@@ -22,31 +23,34 @@ const WhyHecate = () => {
           All the Intelligent Tools you Need for Seamless Customer Engagement
         </p>
         {/* Icon row */}
-        <motion.div className="relative w-full h-[150px] mt-10"
-          initial="hidden"  
+        <motion.div
+          className="relative w-full h-[150px] mt-10"
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={staggerContainer}
         >
-        {iconData.map(({ src, alt, className }, idx) => (
-          <motion.img 
-          key={idx}
-          src={src}
-          alt={alt}
-          className={className}
-          variants={fadeIn}
-          />
-        ))}
+          {iconData.map(({ src, alt, className }, idx) => (
+            <motion.img
+              key={idx}
+              src={src}
+              alt={alt}
+              className={className}
+              variants={fadeIn}
+            />
+          ))}
         </motion.div>
       </div>
-      {/* Robot hand (clipped on small screens) */}
+
+      {/* Giant robot hand (clipped on small screens) */}
+
       <motion.img
-        className="hidden lg:block absolute top-1/2 -right-70 max-h-[190%] transform -translate-y-1/2 object-contain"
+        className="hidden lg:block absolute top-1/2 -right-70 h-[190%] transform -translate-y-1/2 object-contain"
         src={robotPointing}
         alt="A robot hand pointing"
-        initial={ {y: "-100vw", opacity: 0 }}
-        animate={ {y: "0vw", opacity: 1 }}
-        exit={ {y: "0vw", opacity: 1 }}
+        initial={{ y: "-100vw", opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: 0, opacity: 1 }}
         transition={{ ...tweenIn, duration: 1, ease: [0.42,0,0.58,1], delay: 2 }}
       />
     </section>
