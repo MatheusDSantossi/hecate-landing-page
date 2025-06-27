@@ -44,6 +44,10 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  --detail-medium-contrast: rgb(25, 25, 25);
+  --detail-low-contrast: rgb(21, 21, 21);
+  --detail-medium-contrast-rgb-value: 25, 25, 25;
+
 }
 
 .burger-icon {
@@ -69,12 +73,4 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
