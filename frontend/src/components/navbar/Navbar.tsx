@@ -11,7 +11,7 @@ function Navbar() {
   return (
     <nav className="bg-primary">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <img src={lightLogo} className="h-14" alt="Light Hecate Logo" />
+        <img src={lightLogo} className="h-12 lg:h-14" alt="Light Hecate Logo" />
         {/* {isDarkMode ? (
         <img src={darkLogo} className="h-10" alt="Light Hecate Logo" />
       ) : (
@@ -21,7 +21,7 @@ function Navbar() {
         <div className="hidden md:grid place-content-center">
           <SlideTabsExample bgColor="bg-primary" />
         </div>
-        <div className="hidden md:grid place-content-center z-20">
+        <div className="hidden md:inline-block relative z-20">
           <AnimatedButton children={"See Hecate in Action"} />
         </div>
 

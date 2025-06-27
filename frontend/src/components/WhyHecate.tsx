@@ -46,14 +46,14 @@ const WhyHecate = () => {
           <img
             src={happyIcon}
             alt="Happy face icon"
-            className="absolute left-1/2 bottom-0 w-6 h-6 transform -translate-x-1/2"
+            className="absolute left-1/2 -bottom-3 w-6 h-6 transform -translate-x-1/2"
           />
           {/* 5. Arrows */}
           {/* Arrow pointing from bulb down to happy face */}
           <img
             src={arrow}
             alt="Arrow"
-            className="absolute left-1/2 top-[4rem] w-15 h-10 transform -translate-x-1/2 rotate-90"
+            className="absolute left-1/2 top-[4.2rem] w-15 h-10 transform -translate-x-1/2 rotate-90"
           />
           {/* Arrow from bulb to support (left) */}
           <img
