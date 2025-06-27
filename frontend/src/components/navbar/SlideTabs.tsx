@@ -23,7 +23,7 @@ const SlideTabs = ({ bgColor }) => {
             opacity: 0,
         }));
     }}
-    className={`relative mx-auto flex w-fit ${bgColor} p-1`}>
+    className={`relative mx-auto flex w-fit ${bgColor} p-1 font-clash`}>
       {navItems.map(({ id, label }) => (
         <Tab key={id} setPosition={setPosition}>{label}</Tab>
       ))}
