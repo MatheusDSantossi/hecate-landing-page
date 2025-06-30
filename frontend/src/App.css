@@ -40,14 +40,14 @@
 /* All CSS */
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  --detail-medium-contrast: rgb(25, 25, 25);
+  width: 100%;
+  /* max-width: 1280px; */
+  margin: 0;
+  /* padding: 2rem; */
+  /* text-align: center; */
+  --detail-medium-contrast: rgb(25, 25, 25, 0.8);
   --detail-low-contrast: rgb(21, 21, 21);
   --detail-medium-contrast-rgb-value: 25, 25, 25;
-
 }
 
 .burger-icon {

@@ -4,11 +4,13 @@ import Navbar from "./components/navbar/Navbar";
 import WhyHecate from "./components/WhyHecate";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { fadeIn } from "./lib/animations";
+import { fadeIn, tweenIn } from "./lib/animations";
 import Carousel from "./components/carousel/Carousel";
 import type { EmblaOptionsType } from "embla-carousel";
 
 import "./styles/embla.css";
+
+import giantRobotHand from "/huge_robot_hand.png";
 
 //  TODO: Add a loading overlay in the main page
 
@@ -29,11 +31,29 @@ function App() {
         variants={fadeIn}
         className="w-full bg-primary-dark"
       >
-        <div className="absolute top-0 left-0 w-full">
-          <Navbar />
+        <Navbar />
+
+        <div className="relative">
           <Home />
+        </div>
+
+        <div className="relative">
           <WhyHecate />
-          <Carousel slides={SLIDES} options={OPTIONS} />
+        </div>
+
+        <div className="relative overflow-visible">
+          <div className="relative z-20">
+            <Carousel slides={SLIDES} options={OPTIONS} />
+            <motion.img
+              src={giantRobotHand}
+              alt="Robot hand"
+              className="absolute -z-10 -bottom-35 lg:-bottom-70 left-1/3 lg:left-[26%] transform -translate-x-1/2 rotate-180 pointer-events-none w-[90%] lg:w-[800px]"
+              initial={{ x: "100vw", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 0, opacity: 1 }}
+              transition={{ ...tweenIn, duration: 0.8, ease: [0.42,0,0.58,1], delay: 2}}
+            />
+          </div>
         </div>
       </motion.div>
     </AnimatePresence>

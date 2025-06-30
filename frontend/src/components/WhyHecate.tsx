@@ -1,6 +1,6 @@
 import robotPointing from "/huge_robot_hand_pointing.png";
 
-import { motion, useScroll, useTransform, type Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { fadeIn, staggerContainer, tweenIn } from "../lib/animations";
 import { iconData } from "../utils/WhyHecateIconsData";
 
@@ -45,7 +45,7 @@ const WhyHecate = () => {
       {/* Giant robot hand (clipped on small screens) */}
 
       <motion.img
-        className="hidden lg:block absolute top-1/2 -right-70 h-[190%] transform -translate-y-1/2 object-contain"
+        className="block absolute top-1/3 -right-50 h-[140%] transform -translate-y-1/2 object-contain"
         src={robotPointing}
         alt="A robot hand pointing"
         initial={{ y: "-100vw", opacity: 0 }}
