@@ -17,8 +17,11 @@ import giantRobotHand from "/huge_robot_hand.png";
 const OPTIONS: EmblaOptionsType = {
   loop: true,
 };
-const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+// const SLIDE_COUNT = 5;
+// const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+
+import { slides as SLIDES } from "./utils/CarouselSlides";
+
 
 function App() {
   return (

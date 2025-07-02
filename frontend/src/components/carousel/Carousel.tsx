@@ -12,13 +12,15 @@ import {
 } from "./EmblaCarouselArrowButtons";
 import { DotButton, useDotButton } from "./EmblaCarouselDotButtons";
 
+import type { SlideType } from "../../utils/CarouselSlides";
+
 const TWEEN_FACTOR_BASE = 0.84;
 
 const numberWithinRange = (number: number, min: number, max: number): number =>
   Math.min(Math.max(number, min), max);
 
 type PropType = {
-  slides: number[];
+  slides: SlideType[];
   options?: EmblaOptionsType;
 };
 
@@ -97,13 +99,9 @@ const Carousel: React.FC<PropType> = (props) => {
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((index) => (
+          {slides.map((slide, index) => (
             <div className="embla__slide" key={index}>
-              <img
-                className="embla__slide__img"
-                src={`https://picsum.photos/600/350?v=${index}`}
-                alt="Your alt text"
-              />
+                <img className="embla__slide__img" src={slide.src} alt={slide.alt} />
             </div>
           ))}
         </div>
