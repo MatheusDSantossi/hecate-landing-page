@@ -1,12 +1,12 @@
 import "../../App.css";
 import lightLogo from "/logo.svg";
-import darkLogo from "/logo_darker.svg";
+// import darkLogo from "/logo_darker.svg";
 import { SlideTabsExample } from "./SlideTabs";
 import { AnimatedButton } from "./Button";
 import NavMenu from "./NavMenu";
 
 function Navbar() {
-  const isDarkMode = window.matchMedia("(prefers-color-sheme: dark)").matches;
+  // const isDarkMode = window.matchMedia("(prefers-color-sheme: dark)").matches;
 
   return (
     <nav className="bg-primary">

@@ -1,6 +1,8 @@
-import { motion } from 'framer-motion';
+import { type SVGMotionProps, motion } from 'framer-motion';
 
-const Path = (props) => (
+type PathProps = SVGMotionProps<SVGPathElement>;
+
+const Path = (props: PathProps) => (
   <motion.path
     // fill="transparent"
     strokeWidth="3"
@@ -50,12 +52,9 @@ const MenuToggle = ({ menuOpen, setMenuOpen }: MenuToggleProps) => (
 const toggleContainer = {
   outline: "none",
   border: "none",
-  WebkitUserSelect: "none",
-  MozUserSelect: "none",
+  // WebkitUserSelect: "none",
+  // MozUserSelect: "none",
   cursor: "pointer",
-//   position: "absolute",
-//   top: 18,
-//   left: 15,
   width: 50,
   height: 50,
   borderRadius: "50%",

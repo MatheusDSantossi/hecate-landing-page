@@ -1,14 +1,31 @@
-import { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { useRef, useState, type ReactNode } from "react";
+import { type HTMLMotionProps, motion } from "framer-motion";
 import { navItems } from "../../utils/NavData";
 
-export const SlideTabsExample = ({ bgColor }) => {
+interface BgColorProps {
+  bgColor: string;
+};
+
+// The shape of the position object
+interface TabPosition {
+  width: number;
+  left: number;
+  opacity: number;
+};
+
+// Pick up all the normal <li> motion props, plus our setPostion callback
+type TabProps = HTMLMotionProps<"li"> & {
+  children: ReactNode;
+  setPosition: (pos: TabPosition) => void;
+};
+
+export const SlideTabsExample: React.FC<BgColorProps> = ({ bgColor }) => {
   return (
       <SlideTabs bgColor={bgColor} />
   );
 };
 
-const SlideTabs = ({ bgColor }) => {
+const SlideTabs: React.FC<BgColorProps> = ({ bgColor }) => {
   const [position, setPosition] = useState({
     left: 0,
     width: 0,
