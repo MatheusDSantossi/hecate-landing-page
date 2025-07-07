@@ -16,19 +16,37 @@
   "plugins": [
     "@typescript-eslint",
     "react",
-    "react-hooks"
+    "react-hooks",
+    "react-refresh",
+    "simple-import-sort"
   ],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:react-refresh/recommended"
   ],
   "rules": {
     // Start with minimal rules (add gradually)
     "react/react-in-jsx-scope": "off", // Not needed in React 17+
     "@typescript-eslint/no-explicit-any": "warn", // Start as warning
-    "no-console": "warn"
+    "no-console": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/consistent-type-imports": "warn",
+    "@typescript-eslint/no-floating-promises": "warn",
+    "simple-import-sort/imports": "warn",
+    "simple-import-sort/exports": "warn",
+    "@typescript-eslint/ban-types": [
+      "warn",
+      {
+        "extendDefaults": true,
+        "types": {
+          "{}": false // We can customize it if neeeded
+        }
+      }
+    ]
   },
   "settings": {
     "react": {

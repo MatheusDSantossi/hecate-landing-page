@@ -12,6 +12,7 @@ type UseDotButtonType = {
   onDotButtonClick: (index: number) => void
 }
 
+/* eslint-disable-next-line react-refresh/only-export-components */
 export const useDotButton = (
   emblaApi: EmblaCarouselType | undefined,
   onButtonClick?: (emblaApi: EmblaCarouselType) => void

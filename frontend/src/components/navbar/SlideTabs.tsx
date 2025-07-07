@@ -4,14 +4,14 @@ import { navItems } from "../../utils/NavData";
 
 interface BgColorProps {
   bgColor: string;
-};
+}
 
 // The shape of the position object
 interface TabPosition {
   width: number;
   left: number;
   opacity: number;
-};
+}
 
 // Pick up all the normal <li> motion props, plus our setPostion callback
 type TabProps = HTMLMotionProps<"li"> & {
@@ -20,9 +20,7 @@ type TabProps = HTMLMotionProps<"li"> & {
 };
 
 export const SlideTabsExample: React.FC<BgColorProps> = ({ bgColor }) => {
-  return (
-      <SlideTabs bgColor={bgColor} />
-  );
+  return <SlideTabs bgColor={bgColor} />;
 };
 
 const SlideTabs: React.FC<BgColorProps> = ({ bgColor }) => {
@@ -33,23 +31,26 @@ const SlideTabs: React.FC<BgColorProps> = ({ bgColor }) => {
   });
 
   return (
-    <ul 
-    onMouseLeave={() => {
-        setPosition(pv => ({
-            ...pv,
-            opacity: 0,
+    <ul
+      onMouseLeave={() => {
+        setPosition((pv) => ({
+          ...pv,
+          opacity: 0,
         }));
-    }}
-    className={`relative mx-auto flex w-fit ${bgColor} p-1 font-clash`}>
+      }}
+      className={`relative mx-auto flex w-fit ${bgColor} p-1 font-clash`}
+    >
       {navItems.map(({ id, label }) => (
-        <Tab key={id} setPosition={setPosition}>{label}</Tab>
+        <Tab key={id} setPosition={setPosition}>
+          {label}
+        </Tab>
       ))}
       <Cursor position={position} />
     </ul>
   );
 };
 
-const Tab = ({ children, setPosition }) => {
+const Tab = ({ children, setPosition }: TabProps) => {
   const ref = useRef<HTMLLIElement>(null);
 
   return (
@@ -71,9 +72,8 @@ const Tab = ({ children, setPosition }) => {
         opacity: 1,
         scale: 1.05,
         boxShadow: "0px 5px 8px #407",
-        cursor: "pointer"
+        cursor: "pointer",
       }}
-
       className="relative z-10 block cursor-pointer px-3 py-1.5 mt-5 rounded-full text-base uppercase text-white font-medium hover:text-primary md:px-5 md:py-3 md:mt-0 md:text-sm"
     >
       {children}
@@ -81,7 +81,11 @@ const Tab = ({ children, setPosition }) => {
   );
 };
 
-const Cursor = ({ position }) => {
+interface motionPosition {
+  position: { left: number; width: number; opacity: number };
+}
+
+const Cursor = ({ position }: motionPosition) => {
   return (
     <motion.li
       animate={position}

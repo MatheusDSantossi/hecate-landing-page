@@ -18,10 +18,10 @@ function Navbar() {
           <img src={lightLogo} className="h-10" alt="Light Hecate Logo" />
         )} */}
         {/* Access links */}
-        <div className="hidden md:grid place-content-center">
+        <div className="hidden lg:grid place-content-center">
           <SlideTabsExample bgColor="bg-primary" />
         </div>
-        <div className="hidden md:inline-block relative z-20">
+        <div className="hidden lg:inline-block relative z-20">
           <AnimatedButton children={"See Hecate in Action"} />
         </div>
 
