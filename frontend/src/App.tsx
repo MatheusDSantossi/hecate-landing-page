@@ -21,7 +21,8 @@ const OPTIONS: EmblaOptionsType = {
 // const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 import { slides as SLIDES } from "./utils/CarouselSlides";
-
+import OurFeatures from "./components/ourFeatures/OurFeatures";
+import Quote from "./components/quote/Quote";
 
 function App() {
   return (
@@ -54,9 +55,20 @@ function App() {
               initial={{ x: "100vw", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: 0, opacity: 1 }}
-              transition={{ ...tweenIn, duration: 0.8, ease: [0.42,0,0.58,1], delay: 2}}
+              transition={{
+                ...tweenIn,
+                duration: 0.8,
+                ease: [0.42, 0, 0.58, 1],
+                delay: 2,
+              }}
             />
           </div>
+        </div>
+        <div className="relative mt-76">
+          <Quote />
+        </div>
+        <div className="relative my-56">
+          <OurFeatures />
         </div>
       </motion.div>
     </AnimatePresence>

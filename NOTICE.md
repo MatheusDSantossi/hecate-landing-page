@@ -1,1 +1,2 @@
 This product's button component was adapted from "Create the PERFECT Button (TailwindCSS / Framer Motion)" by rithmic (https://www.youtube.com/watch?v=jcpLprT5F0I), used under the terms of the MIT license.
+Our text typing animation was adapted from "How I Created a Typing Text Animation with Framer Motion" (https://blog.noelcserepy.com/how-i-created-a-typing-text-animation-with-framer-motion), used under the terms of the MIT license

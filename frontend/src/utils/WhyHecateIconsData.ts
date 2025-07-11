@@ -22,14 +22,14 @@ export const iconData: IconData[] = [
     src: support24h,
     alt: "Support 24h icon",
     className:
-      "absolute left-25 xl:left-50 md:left-55 lg:left-65 top-23 w-6 h-6 transform -translate-x-1/2",
+      "absolute left-35 xl:left-50 lg:left-65 md:left-55 sm:left-45 top-23 w-6 h-6 transform -translate-x-1/2",
   },
   /* 3. Right icon (Info) */
   {
     src: infoIcon,
     alt: "Info icon",
     className:
-      "absolute right-20 xl:right-45 md:right-50 lg:right-60 top-23 w-6 h-6 transform -translate-x-1/2",
+      "absolute right-30 xl:right-45 lg:right-60 md:right-50 sm:right-40 top-23 w-6 h-6 transform -translate-x-1/2",
   },
   /* 4. Bottom icon (Happy face) */
   {

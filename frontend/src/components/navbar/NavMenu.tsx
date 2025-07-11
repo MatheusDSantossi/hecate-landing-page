@@ -19,8 +19,10 @@ const NavMenu = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             className="absolute bg-primary-dark top-full -left-[30vw] mt-2 w-100 transform -translate-x-1/2 h-100 rounded-md shadow-lg z-20"
-          >
+            >
+            <div className="mt-5"></div>
             <SlideTabsExample bgColor="bg-primary-dark" />
+            <div className="mt-10"></div>
             <AnimatedButton children={"See Hecate in Action"} />
           </motion.div>
         )}
