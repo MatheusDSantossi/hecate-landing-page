@@ -21,8 +21,8 @@ const OPTIONS: EmblaOptionsType = {
 // const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 import { slides as SLIDES } from "./utils/CarouselSlides";
-import OurFeatures from "./components/OurFeatures";
-import Quote from "./components/Quote";
+import OurFeatures from "./components/ourFeatures/OurFeatures";
+import Quote from "./components/quote/Quote";
 
 function App() {
   return (

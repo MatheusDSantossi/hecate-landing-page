@@ -1,5 +1,6 @@
-import cropped_logo from "/cropped_logo.svg";
-import quote from "/quote.svg";
+import TextAnimation from "./TextAnimation";
+import cropped_logo from "/quote/cropped_logo.svg";
+import quote from "/quote/quote.svg";
 
 const Quote = () => {
   return (
@@ -7,7 +8,7 @@ const Quote = () => {
       <div className="flex items-center">
         <img className="w-40" src={cropped_logo} alt="Our logo cropped" />
         <h1 className="text-xl md:text-2xl pl-2 ml-4 text-white font-clash">
-          “Where Your Goals Meet World-Class AI”
+          <TextAnimation children={"“Where Your Goals Meet World-Class AI”"} />
         </h1>
       </div>
       <div className="pointer-events-none">

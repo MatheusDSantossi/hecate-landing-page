@@ -1,18 +1,12 @@
-import line from "/line.svg";
-import { features } from "../utils/OurFeaturesContent";
+import { features } from "../../utils/OurFeaturesContent";
+import ShinyLine from "./ShinyLine";
 import { motion } from "framer-motion";
+import { fadeInUp } from "../../lib/animations";
 
 const OurFeatures = () => {
   return (
     <div>
-      <motion.img 
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{
-        duration: 1.25,
-        ease: 'easeInOut'
-      }}
-      src={line} alt="Gradient line" />
+      <ShinyLine />
       <div className="flex justify-center mt-16 mb-16 lg:justify-start lg:ml-30 text-white font-medium text-6xl font-clash">
         Our Features
       </div>
@@ -31,13 +25,17 @@ const OurFeatures = () => {
             },
             i
           ) => (
-            <div
+            <motion.div
               key={i}
               className={`flex flex-col ${flexClass} items-center md:space-x-8`}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.4 }}
+              variants={fadeInUp}
             >
               <img src={imgSrc} alt={imgAlt} className={`mb-10 ${imgClass}`} />
               <div
-                className={`flex flex-1 space-y-4 flex-col items-center ${contentMargin} md:text-end md:items-start`}
+                className={`flex flex-1 space-y-4 flex-col items-center ${contentMargin} md:text-end lg:items-start`}
               >
                 <p className="text-2xl lg:text-3xl font-medium text-start">
                   {text}
@@ -53,7 +51,7 @@ const OurFeatures = () => {
                   />
                 </div>
               </div>
-            </div>
+            </motion.div>
           )
         )}
       </div>

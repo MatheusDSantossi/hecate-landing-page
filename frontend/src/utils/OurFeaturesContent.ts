@@ -1,4 +1,4 @@
-import checkIcon from "/check.svg";
+import checkIcon from "/ourFeature/check.svg";
 
 export interface Feature {
     imgSrc: string; 
@@ -12,7 +12,7 @@ export interface Feature {
 }
 export const features: Feature[] = [
   {
-    imgSrc: "/our_feature_image_1.svg",
+    imgSrc: "/ourFeature/our_feature_image_1.svg",
     imgAlt: "Feature 1 idea",
     imgClass: "",
     flexClass: "lg:flex-row",
@@ -22,7 +22,7 @@ export const features: Feature[] = [
     iconSrc: checkIcon,
 },
 {
-    imgSrc: "/our_feature_image_2.svg",
+    imgSrc: "/ourFeature/our_feature_image_2.svg",
     imgAlt: "Feature 2 income",
     imgClass: "lg:mr-60",
     flexClass: "lg:flex-row-reverse",
@@ -32,7 +32,7 @@ export const features: Feature[] = [
     iconSrc: checkIcon,
 },
 {
-  imgSrc: "/our_feature_image_3.svg",
+  imgSrc: "/ourFeature/our_feature_image_3.svg",
   imgAlt: "Feature 3 happiness",
   imgClass: "",
   flexClass: "lg:flex-row",
