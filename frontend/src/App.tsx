@@ -23,6 +23,7 @@ const OPTIONS: EmblaOptionsType = {
 import { slides as SLIDES } from "./utils/CarouselSlides";
 import OurFeatures from "./components/ourFeatures/OurFeatures";
 import Quote from "./components/quote/Quote";
+import ContactUs from "./components/contactUs/ContactUs";
 
 function App() {
   return (
@@ -69,6 +70,9 @@ function App() {
         </div>
         <div className="relative my-56">
           <OurFeatures />
+        </div>
+        <div className="relative my-56">
+          <ContactUs />
         </div>
       </motion.div>
     </AnimatePresence>
