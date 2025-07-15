@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 
-export const AnimatedButton = ({ children }: { children: React.ReactNode }) => {
+export const AnimatedButton = ({ children, disabled = false }: { children: React.ReactNode, disabled?: boolean }) => {
   return (
     <motion.button className="mt-5 cursor-pointer px-6 py-2 rounded-md radial-gradient md:mt-0"
+    disabled={disabled}
     initial={{ "--x": "100%", scale: 1}}
     animate={{ "--x": "-100%"}}
     whileTap={{ scale: 0.97 }}
