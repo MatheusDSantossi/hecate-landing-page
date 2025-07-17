@@ -10,7 +10,7 @@ function Navbar() {
 
   return (
     <nav className="bg-primary">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto xs:ml-6 p-4">
         <img src={lightLogo} className="h-12 lg:h-14" alt="Light Hecate Logo" />
         {/* {isDarkMode ? (
         <img src={darkLogo} className="h-10" alt="Light Hecate Logo" />

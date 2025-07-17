@@ -8,7 +8,7 @@ const NavMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="relative mr-3 block text-center lg:hidden">
+    <div className="relative sm:mr-3 block text-center lg:hidden">
       {/* The fixed MenuToggle */}
       <MenuToggle menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       {/* AnimatePresence for the dropdown panel */}

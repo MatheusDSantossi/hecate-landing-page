@@ -22,14 +22,14 @@ export const iconData: IconData[] = [
     src: support24h,
     alt: "Support 24h icon",
     className:
-      "absolute left-35 xl:left-50 lg:left-65 md:left-55 sm:left-45 top-23 w-6 h-6 transform -translate-x-1/2",
+      "absolute xs:left-16 sm:left-25 xl:left-50 lg:left-65 md:left-55 sm:left-45 top-23 w-6 h-6 transform -translate-x-1/2",
   },
   /* 3. Right icon (Info) */
   {
     src: infoIcon,
     alt: "Info icon",
     className:
-      "absolute right-30 xl:right-45 lg:right-60 md:right-50 sm:right-40 top-23 w-6 h-6 transform -translate-x-1/2",
+      "absolute xs:right-10 sm:right-20 xl:right-45 lg:right-60 md:right-50 sm:right-40 top-23 w-6 h-6 transform -translate-x-1/2",
   },
   /* 4. Bottom icon (Happy face) */
   {
@@ -49,12 +49,12 @@ export const iconData: IconData[] = [
   {
     src: arrow,
     alt: "Arrow poiting left",
-    className: "absolute left-[33%] top-[3rem] w-15 h-10 transform rotate-150",
+    className: "absolute xs:left-[25%] xs:top-[3.3rem] sm:left-[33%] sm:top-[3rem] w-15 h-10 transform rotate-150",
   },
   /* Arrow from bulb to info (right) */
   {
     src: arrow,
     alt: "Arrow poiting right",
-    className: "absolute right-[33%] top-[3rem] w-15 h-10 transform rotate-30",
+    className: "absolute xs:right-[25%] xs:top-[3.3rem] sm:right-[33%] sm:top-[3rem] w-15 h-10 transform rotate-30",
   },
 ];

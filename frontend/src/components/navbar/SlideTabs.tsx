@@ -74,7 +74,7 @@ const Tab = ({ children, setPosition }: TabProps) => {
         boxShadow: "0px 5px 8px #407",
         cursor: "pointer",
       }}
-      className="relative z-10 block cursor-pointer px-3 py-1.5 mt-5 rounded-full text-base uppercase text-white font-medium hover:text-primary md:px-5 md:py-3 md:mt-0 md:text-sm"
+      className="relative z-10 block cursor-pointer xs:px-1 sm:px-3 py-1.5 mt-5 rounded-full xs:text-xs sm:text-base uppercase text-white font-medium hover:text-primary md:px-5 md:py-3 md:mt-0 md:text-sm"
     >
       {children}
     </motion.li>
