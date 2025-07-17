@@ -96,7 +96,7 @@ const Carousel: React.FC<PropType> = (props) => {
   }, [emblaApi, tweenOpacity, setTweenFactor]);
 
   return (
-    <div className="embla max-w-[29rem] sm:max-w-[40rem] md:max-w-[45rem] lg:max-w-[60rem]">
+    <div className="embla max-w-[22rem] sm:max-w-[40rem] md:max-w-[45rem] lg:max-w-[60rem]">
       <div className="embla__viewport md:h-[28rem]" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((slide, index) => (

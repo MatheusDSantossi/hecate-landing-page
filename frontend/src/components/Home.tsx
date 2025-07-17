@@ -20,8 +20,8 @@ const Home = () => {
 
       {/* Hero text */}
       <div className="flex z-1 py-8 
-       justify-center text-center max-w-xl md:px-4 lg:mr-[300px]">
-        <h1 className="text-white font-medium text-sm xs:text-xl md:text-5xl lg:text-9xl leading-tight font-clash">
+       justify-center text-center max-w-xl xs:mx-20 lg:mx-0 md:px-4 lg:mr-[300px]">
+        <h1 className="text-white font-medium xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight font-clash">
           Elevate Your Business with{" "}
           <span className="text-secondary">AI-Powered</span> {' '} Conversations
         </h1>

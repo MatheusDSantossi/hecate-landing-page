@@ -45,7 +45,7 @@ const Form = () => {
   return (
     <AnimatePresence>
       {isVisible ? (
-        <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto">
+        <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-8 md:mx-auto">
           {/* Full name */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -144,7 +144,7 @@ const Form = () => {
 
           <p
             id="helper-text-explanation"
-            className="mt-2 text-lg text-gray-300 relative"
+            className="mt-2 text-lg text-gray-300 relative text-center"
           >
             We'll never share your details. Read our{" "}
             <a href="#" className="font-medium text-secondary hover:underline">
