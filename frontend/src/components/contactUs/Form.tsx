@@ -45,7 +45,7 @@ const Form = () => {
   return (
     <AnimatePresence>
       {isVisible ? (
-        <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-8 md:mx-auto">
+        <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-8 md:mx-auto lg:mt-16">
           {/* Full name */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}

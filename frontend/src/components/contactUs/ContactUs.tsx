@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { fadeInUp } from "../../lib/animations";
 import Form from "./Form";
 import { content } from "../../utils/ContactUsContent";
+import TextAnimation from "../quote/TextAnimation";
 
 const ContactUs = () => {
   return (
@@ -17,7 +18,7 @@ const ContactUs = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.4 }}
           variants={fadeInUp}
-          >{text}
+          ><TextAnimation children={text} useCursor={false} />
           </motion.h1>
         ))}
       </div>
