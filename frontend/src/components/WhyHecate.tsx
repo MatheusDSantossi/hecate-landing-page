@@ -19,7 +19,7 @@ const WhyHecate = () => {
         <h3 className="text-3xl font-medium md:text-4xl text-white text-center">
           Why Hecate?
         </h3>
-        <p className="text-lg text-white md:text-xl mt-4 text-center">
+        <p className="text-lg text-white xs:text-base md:text-xl mt-4 text-center">
           All the Intelligent Tools you Need for Seamless Customer Engagement
         </p>
         {/* Icon row */}

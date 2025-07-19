@@ -2,13 +2,14 @@ import { features } from "../../utils/OurFeaturesContent";
 import ShinyLine from "./ShinyLine";
 import { motion } from "framer-motion";
 import { fadeInUp } from "../../lib/animations";
+import TextAnimation from '../quote/TextAnimation';
 
 const OurFeatures = () => {
   return (
     <div>
       <ShinyLine />
       <div className="flex justify-center mt-16 mb-16 lg:justify-start lg:ml-30 text-white font-medium text-5xl md:text-6xl font-clash">
-        Our Features
+        <TextAnimation children={"Our Features"} useCursor={false} /> 
       </div>
       <div className="space-y-12 md:ml-30">
         {features.map(
@@ -37,7 +38,7 @@ const OurFeatures = () => {
               <div
                 className={`flex flex-1 space-y-4 flex-col items-center ${contentMargin} md:text-end lg:items-start`}
               >
-                <p className="text-xl md:text-2xl lg:text-3xl font-medium text-center md:text-start">
+                <p className="text-xl md:text-2xl lg:text-3xl font-medium text-center md:text-start mx-2">
                   {text}
                 </p>
                 <div className="flex items-center justify-center">

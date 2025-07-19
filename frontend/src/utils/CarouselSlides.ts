@@ -1,6 +1,6 @@
-import Grow from "/carousel/Grow.png"
+import AI from "/carousel/AI.jpg"
 import Focus from "/carousel/Focus.png"
-import GoogleGemini from "/carousel/google_gemini.jpg"
+import GoogleGemini from "/carousel/google_gemini.png"
 import Security from "/carousel/security.jpg"
 
 export interface SlideType {
@@ -11,7 +11,7 @@ export interface SlideType {
 
 export const slides: SlideType[] = [
   {
-    src: Grow,
+    src: AI,
     alt: "Flowers growing"
   },
   {

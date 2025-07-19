@@ -1,27 +1,42 @@
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import {
+  motion,
+  useMotionValue,
+  useTransform,
+  animate,
+  useInView,
+} from "framer-motion";
 import CursorBlinker from "./CursorBlinker";
-import React, { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
-const TextAnimation = ({ children }) => {
+const TextAnimation = ({ children, useCursor }) => {
   const baseText = children;
-  const count = useMotionValue(0);
 
+  // Create a ref a nd derive an "inView" boolean
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  // Motion values for counting up
+  const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => Math.round(latest));
-  const displayText = useTransform(rounded, (latest) => baseText.slice(0, latest));
+  const displayText = useTransform(rounded, (latest) =>
+    baseText.slice(0, latest)
+  );
 
   useEffect(() => {
+    if (!isInView) return;
+
     const controls = animate(count, baseText.length, {
-        type: "tween",
-        duration: 1,
-        ease: "easeInOut",
+      type: "tween",
+      duration: 1.5,
+      ease: "easeInOut",
     });
     return controls.stop;
-  }, [baseText.length, count]);
+  }, [isInView, baseText.length, count]);
 
   return (
-    <span>
+    <span ref={ref}>
       <motion.span>{displayText}</motion.span>
-      <CursorBlinker />
+      {useCursor && <CursorBlinker />}
     </span>
   );
 };
