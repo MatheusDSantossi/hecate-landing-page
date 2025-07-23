@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { features } from "../../utils/OurFeaturesContent";
 import ShinyLine from "./ShinyLine";
 import { motion } from "framer-motion";
@@ -60,4 +61,4 @@ const OurFeatures = () => {
   );
 };
 
-export default OurFeatures;
+export default memo(OurFeatures);

@@ -4,6 +4,7 @@ import copyright from "/footer/Copyright.svg";
 import { Options } from "../../utils/FooterOptions";
 import { motion } from "framer-motion";
 import { fadeInUp } from "../../lib/animations";
+import { memo } from "react";
 
 const Footer = () => {
   return (
@@ -54,4 +55,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default memo(Footer);

@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { motion } from "framer-motion";
 import { fadeInUp } from "../../lib/animations";
 import Form from "./Form";
@@ -28,4 +29,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default memo(ContactUs);

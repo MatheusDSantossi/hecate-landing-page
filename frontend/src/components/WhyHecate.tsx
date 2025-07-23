@@ -3,6 +3,7 @@ import robotPointing from "/huge_robot_hand_pointing.png";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer, tweenIn } from "../lib/animations";
 import { iconData } from "../utils/WhyHecateIconsData";
+import { memo } from "react";
 
 const WhyHecate = () => {
   
@@ -57,4 +58,4 @@ const WhyHecate = () => {
   );
 };
 
-export default WhyHecate;
+export default memo(WhyHecate);

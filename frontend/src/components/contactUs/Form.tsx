@@ -5,7 +5,7 @@ import { contactSchema, type ContactFormData } from "../../utils/contactShema";
 import { AnimatedButton } from "../navbar/Button";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { memo, useState } from "react";
 
 const Form = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -170,4 +170,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default memo(Form);

@@ -1,3 +1,4 @@
+import { memo } from "react";
 import TextAnimation from "./TextAnimation";
 import cropped_logo from "/quote/cropped_logo.svg";
 import quote from "/quote/quote.svg";
@@ -18,4 +19,4 @@ const Quote = () => {
   );
 };
 
-export default Quote;
+export default memo(Quote);

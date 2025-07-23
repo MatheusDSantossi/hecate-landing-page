@@ -6,7 +6,7 @@ import {
   useInView,
 } from "framer-motion";
 import CursorBlinker from "./CursorBlinker";
-import { useEffect, useRef } from "react";
+import { memo, useEffect, useRef } from "react";
 
 const TextAnimation = ({ children, useCursor }) => {
   const baseText = children;
@@ -41,4 +41,4 @@ const TextAnimation = ({ children, useCursor }) => {
   );
 };
 
-export default TextAnimation;
+export default memo(TextAnimation);

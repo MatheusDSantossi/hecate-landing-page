@@ -3,6 +3,7 @@ import computer from "/home/MacBook Air (15 inch).png";
 
 import { motion } from "framer-motion";
 import { fadeIn, tweenIn } from "../lib/animations";
+import { memo } from "react";
 
 const Home = () => {
   return (
@@ -57,4 +58,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default memo(Home);

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 // import { SlideTabsExample } from "./SlideTabs";
 import { motion, AnimatePresence } from "framer-motion";
 import MenuToggle from "./MenuToggle";
@@ -31,4 +31,4 @@ const NavMenu = () => {
   );
 };
 
-export default NavMenu;
+export default memo(NavMenu);
