@@ -159,7 +159,7 @@ const Form = () => {
       ) : (
         <div className="relative">
           <button
-            className="bg-secondary p-2 rounded-2xl relative text-primary font-medium cursor-pointer hover:bg-secondary-dark"
+            className="bg-secondary p-2 lg:mt-24 rounded-2xl relative text-primary font-medium cursor-pointer hover:bg-secondary-dark"
             onClick={() => setIsVisible(true)}
           >
             Show Form

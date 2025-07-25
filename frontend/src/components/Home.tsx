@@ -10,7 +10,7 @@ const Home = () => {
     <div className="relative flex items-center justify-center bg-primary shadow-2xl">
       {/* Left-side robot image */}
       <motion.img
-        className="hidden lg:block h-[500px] object-contain -ml-25"
+        className="hidden lg:block h-[400px] object-contain -ml-25"
         src={robot}
         alt="A robot"
         initial={{ x: "-100vw", opacity: 0 }}
@@ -41,7 +41,7 @@ const Home = () => {
 
       {/* Right-side laptop image */}
       <motion.img
-        className="hidden lg:block absolute right-0 h-[700px] object-contain mt-10 pointer-events-none"
+        className="hidden lg:block absolute right-0 h-[650px] object-contain mt-10 pointer-events-none"
         src={computer}
         alt="A macbook showing the initial screen of the Chatbot Hecate"
         initial={{ x: "100vw", opacity: 0 }}

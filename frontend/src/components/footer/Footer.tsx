@@ -29,12 +29,18 @@ const Footer = () => {
           viewport={{ once: true, amount: 0.4 }}
           variants={fadeInUp}
         >
-          {Options.map(({ title, option1, option2, option3 }) => (
+          {Options.map(({ title, option1, option2, option3, onClick }) => (
             <div className="flex flex-col mb-5 md:mr-16 xs:text-base lg:text-xl">
               <h2 className="font-medium mb-3 pointer-events-none">{title}</h2>
-              <h3 className="cursor-pointer hover:underline">{option1}</h3>
-              <h3 className="cursor-pointer hover:underline">{option2}</h3>
-              <h3 className="cursor-pointer hover:underline">{option3}</h3>
+              <button onClick={onClick}>
+                <h3 className="cursor-pointer hover:underline">{option1}</h3>
+              </button>
+              <button>
+                <h3 className="cursor-pointer hover:underline">{option2}</h3>
+              </button>
+              <button>
+                <h3 className="cursor-pointer hover:underline">{option3}</h3>
+              </button>
             </div>
           ))}
         </motion.div>
