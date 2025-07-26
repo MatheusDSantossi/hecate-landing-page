@@ -1,8 +1,8 @@
-import { useNavigate } from "react-router";
+// // import { useNavigate } from "react-router";
 
-export const navigateTo = ({url}) => {
-//   const navigate = useNavigate();
+// export const navigateTo = ({url}) => {
+// //   const navigate = useNavigate();
 
     
 
-  }
+//   }
