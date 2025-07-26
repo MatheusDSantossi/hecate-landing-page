@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from "react";
+import React, { memo, useCallback, useEffect, useRef } from "react";
 import type {
   EmblaCarouselType,
   EmblaEventType,
@@ -96,12 +96,20 @@ const Carousel: React.FC<PropType> = (props) => {
   }, [emblaApi, tweenOpacity, setTweenFactor]);
 
   return (
-    <div className="embla max-w-[22rem] sm:max-w-[40rem] md:max-w-[45rem] lg:max-w-[60rem]">
-      <div className="embla__viewport md:h-[28rem]" ref={emblaRef}>
+    <div className="embla max-w-[22rem] sm:max-w-[68vw] md:max-w-[45rem] lg:max-w-[60rem]"
+    >
+      <div
+        className="embla__viewport xs:h-[19rem] md:h-[28rem]"
+        ref={emblaRef}
+      >
         <div className="embla__container">
           {slides.map((slide, index) => (
             <div className="embla__slide" key={index}>
-                <img className="embla__slide__img" src={slide.src} alt={slide.alt} />
+              <img
+                className="embla__slide__img"
+                src={slide.src}
+                alt={slide.alt}
+              />
             </div>
           ))}
         </div>
@@ -128,4 +136,4 @@ const Carousel: React.FC<PropType> = (props) => {
   );
 };
 
-export default Carousel;
+export default memo(Carousel);

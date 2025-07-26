@@ -12,6 +12,8 @@ import "./styles/embla.css";
 
 import giantRobotHand from "/huge_robot_hand.png";
 
+import { memo } from "react";
+
 //  TODO: Add a loading overlay in the main page
 
 const OPTIONS: EmblaOptionsType = {
@@ -61,7 +63,7 @@ function App() {
                 ...tweenIn,
                 duration: 0.8,
                 ease: [0.42, 0, 0.58, 1],
-                delay: 2,
+                delay: 6,
               }}
             />
           </div>
@@ -83,4 +85,4 @@ function App() {
   );
 }
 
-export default App;
+export default memo(App);

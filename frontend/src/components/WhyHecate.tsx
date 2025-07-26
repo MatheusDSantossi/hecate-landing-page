@@ -3,6 +3,7 @@ import robotPointing from "/huge_robot_hand_pointing.png";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer, tweenIn } from "../lib/animations";
 import { iconData } from "../utils/WhyHecateIconsData";
+import { memo } from "react";
 
 const WhyHecate = () => {
   
@@ -19,7 +20,7 @@ const WhyHecate = () => {
         <h3 className="text-3xl font-medium md:text-4xl text-white text-center">
           Why Hecate?
         </h3>
-        <p className="text-lg text-white md:text-xl mt-4 text-center">
+        <p className="text-lg text-white xs:text-base md:text-xl mt-4 text-center">
           All the Intelligent Tools you Need for Seamless Customer Engagement
         </p>
         {/* Icon row */}
@@ -57,4 +58,4 @@ const WhyHecate = () => {
   );
 };
 
-export default WhyHecate;
+export default memo(WhyHecate);

@@ -1,4 +1,5 @@
 import { motion, type Variants } from "framer-motion";
+import { memo } from "react";
 
 const cursorVariants: Variants = {
     blinking: {
@@ -17,9 +18,9 @@ const cursorVariants: Variants = {
 const CursorBlinker = () => {
   return (
     <motion.div variants={cursorVariants} animate="blinking"
-    className="inline-block h-9 w-[1px] translate-y-1 bg-white"
+    className="inline-block h-10 w-[1px] translate-y-1 bg-white"
     />
   )
 }
 
-export default CursorBlinker
+export default memo(CursorBlinker)

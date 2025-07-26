@@ -5,7 +5,7 @@ import { contactSchema, type ContactFormData } from "../../utils/contactShema";
 import { AnimatedButton } from "../navbar/Button";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { memo, useState } from "react";
 
 const Form = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -45,7 +45,7 @@ const Form = () => {
   return (
     <AnimatePresence>
       {isVisible ? (
-        <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-8 md:mx-auto">
+        <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-8 md:mx-auto lg:mt-16">
           {/* Full name */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -159,7 +159,7 @@ const Form = () => {
       ) : (
         <div className="relative">
           <button
-            className="bg-secondary p-2 rounded-2xl relative text-primary font-medium cursor-pointer hover:bg-secondary-dark"
+            className="bg-secondary p-2 lg:mt-24 rounded-2xl relative text-primary font-medium cursor-pointer hover:bg-secondary-dark"
             onClick={() => setIsVisible(true)}
           >
             Show Form
@@ -170,4 +170,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default memo(Form);
