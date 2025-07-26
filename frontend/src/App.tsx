@@ -27,6 +27,7 @@ import OurFeatures from "./components/ourFeatures/OurFeatures";
 import Quote from "./components/quote/Quote";
 import ContactUs from "./components/contactUs/ContactUs";
 import Footer from "./components/footer/Footer";
+import ShinyLine from "./components/ourFeatures/ShinyLine";
 
 function App() {
   return (
@@ -77,7 +78,8 @@ function App() {
         <div className="relative my-56">
           <ContactUs />
         </div>
-        <div className="relative mt-56">
+        <ShinyLine />
+        <div className="relative mt-26">
           <Footer />
         </div>
       </motion.div>
