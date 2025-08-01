@@ -9,7 +9,7 @@ const OurFeatures = () => {
   return (
     <div>
       <ShinyLine />
-      <div className="flex justify-center mt-16 mb-16 lg:justify-start lg:ml-30 text-white font-medium text-5xl md:text-6xl font-clash">
+      <div className="flex justify-center mt-26 mb-16 lg:justify-start lg:ml-30 text-white font-medium text-5xl md:text-6xl font-clash">
         <TextAnimation children={"Our Features"} useCursor={false} /> 
       </div>
       <div className="space-y-12 md:ml-30">
