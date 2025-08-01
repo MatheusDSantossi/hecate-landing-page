@@ -5,10 +5,9 @@ import { motion } from "framer-motion";
 import { fadeInUp } from "../../lib/animations";
 import { memo } from "react";
 import AuroraGradient from "../aurora/AuroraGradient";
-// import { useNavigateTo } from "../../hooks/useNavigateTo";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  // const navigateTo = useNavigateTo();
 
   const menus: FooterMenu[] = footerMenus;
 
@@ -41,15 +40,9 @@ const Footer = () => {
             <ul>
               {menu.options.map(({ label, path }) => (
                 <li key={label}>
-                  <button
-                  className="cursor-pointer hover:underline"
-                    onClick={() => {
-                      console.log("Path: ", path)
-                      // navigateTo(path);
-                    }}
-                  >
+                  <Link className="cursor-pointer hover:underline" to={path}>
                     {label}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>
