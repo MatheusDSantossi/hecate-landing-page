@@ -17,3 +17,9 @@
 - Form layout and styling patterns adapted from Flowbite's Tailwind CSS Forms  
   [Component Library](https://flowbite.com/docs/components/forms/)  
   Used under MIT License
+
+### Aurora Animated Component
+
+- Aurora Animated component was adapted from Beautiful Aurora Gradient Animation with React & Framer-Motion
+[Component Library](https://medium.com/design-bootcamp/beautiful-aurora-gradient-with-react-framer-motion-9ab40674b5fb)  
+Used under MIT License
