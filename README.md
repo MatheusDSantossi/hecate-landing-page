@@ -10,7 +10,7 @@
 
 ![Hecate Preview](/frontend/public/hecate_home_screen.png)
 
-An animated, responsive marketing site for **Hecate**, an AI chatbot that businesses use as a first point of contact with their customers. This repository is the frontend landing page; the chatbot itself (Django + AI backend, React admin dashboard) lives in [TCC-project](https://github.com/MatheusDSantossi/TCC-project).
+An animated, responsive marketing site for **Hecate**, an AI chatbot that businesses use as a first point of contact with their customers. This repository is the frontend landing page; the chatbot itself (Django + AI backend, React admin dashboard) lives in [hecate-chatbot](https://github.com/MatheusDSantossi/hecate-chatbot).
 
 ---
 
