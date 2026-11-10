@@ -1,33 +1,36 @@
-type OptionClickType = {
-  option: string;
-  onClick: () => void;
-};
-
-interface OptionProps {
-  title: string;
-  option1: OptionClickType;
-  option2: OptionClickType;
-  option3: OptionClickType;
+export interface FooterOption {
+  label: string;
+  path: string;
 }
 
-export const Options: OptionProps[] = [
+export interface FooterMenu {
+  title: string;
+  options: FooterOption[];
+}
+
+export const footerMenus: FooterMenu[] = [
   {
     title: "Platform",
-    option1: { option: "Prices", onClick: () => {} },
-    option2: { option: "Integrations", onClick: () => {} },
-    option3: { option: "AI Feature", onClick: () => {} },
+    options: [
+      { label: "Prices", path: "/prices" },
+      { label: "Integrations", path: "/integrations" },
+      { label: "AI Feature", path: "/ai-features" },
+    ],
   },
   {
     title: "Contact Us",
-    option1: { option: "Send a Message", onClick: () => {
-    } },
-    option2: { option: "WhatsApp", onClick: () => {} },
-    option3: { option: "Instagram", onClick: () => {} },
+    options: [
+      { label: "Send a Message", path: "/contact" },
+      { label: "WhatsApp", path: "/whatsapp" },
+      { label: "Instagram", path: "/instagram" },
+    ],
   },
   {
     title: "About Us",
-    option1: { option: "How it works?", onClick: () => {} },
-    option2: { option: "Company", onClick: () => {} },
-    option3: { option: "About Us", onClick: () => {} },
+    options: [
+      { label: "How it works?", path: "/how-it-works" },
+      { label: "Company", path: "/company" },
+      { label: "About Us", path: "/about" },
+    ],
   },
 ];
